@@ -15,8 +15,11 @@ const listening = () => {
   });
 };
 
+// Define where the views folder is
 app.set("views", path.join(__dirname, "views"));
+// Set the templating engine
 app.set("view engine", "pug");
+// Set the static directory for assets
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res, next) => {
